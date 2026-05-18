@@ -1,0 +1,2220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relevos X la Vida contra el Cáncer Juvenil | Asociación solidaria en Granada</title>
+  <meta name="description" content="Asociación sin ánimo de lucro dedicada a mejorar las condiciones de adolescentes y jóvenes adultos con cáncer y sus familias mediante espacios hospitalarios, actividades, acompañamiento y sensibilización." />
+  <meta name="keywords" content="cáncer juvenil, asociación cáncer juvenil, Relevos X la Vida, Granada, voluntariado, jóvenes con cáncer, donaciones solidarias, apoyo oncológico juvenil" />
+  <meta property="og:title" content="Relevos X la Vida contra el Cáncer Juvenil" />
+  <meta property="og:description" content="Acompañamos a adolescentes y jóvenes adultos con cáncer y a sus familias en Granada." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.relevosxlavida.com" />
+  <!-- Favicon: sustituir por /assets/images/favicon-relevos.png -->
+  <link rel="icon" href="/assets/images/favicon-relevos.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =============================================
+       COLOR CORPORATIVO: extraído visualmente de
+       las camisetas oficiales de la asociación
+       (imagen Facebook, mayo 2026).
+       Valor aproximado: #29BFD8 (turquesa/cyan).
+       Si se dispone del archivo de marca original
+       (AI, SVG, PDF), verificar y ajustar.
+       ============================================= */
+
+    :root {
+      --color-azul-relevos: #29BFD8;       /* Turquesa oficial camisetas Relevos X la Vida */
+      --color-azul-claro:   #5DD4E8;       /* Tono más claro para degradados */
+      --color-azul-oscuro:  #0D8FA8;       /* Tono oscuro para hover y contraste */
+      --color-azul-petroleo:#064E5E;       /* Fondos oscuros: header oscuro, footer */
+      --color-coral:        #FF6B6B;
+      --color-amarillo:     #FFD166;
+      --color-blanco:       #FFFFFF;
+      --color-gris-claro:   #F2FAFB;
+      --color-gris-medio:   #D9EFF3;
+      --color-gris-texto:   #4A5568;
+      --color-texto:        #1A202C;
+      --font-titulo:        'Poppins', sans-serif;
+      --font-cuerpo:        'Nunito', sans-serif;
+      --radio:              16px;
+      --radio-sm:           8px;
+      --sombra:             0 4px 24px rgba(41,191,216,0.12);
+      --sombra-hover:       0 8px 40px rgba(41,191,216,0.28);
+      --transicion:         all 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font-cuerpo);
+      color: var(--color-texto);
+      background: var(--color-blanco);
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a  { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ── UTILIDADES ─────────────────────────── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section    { padding: 96px 0; }
+    .section--gris { background: var(--color-gris-claro); }
+    .section--azul { background: var(--color-azul-relevos); color: var(--color-blanco); }
+    .section--oscuro { background: var(--color-azul-petroleo); color: var(--color-blanco); }
+
+    .tag {
+      display: inline-block;
+      background: rgba(0,119,182,0.10);
+      color: var(--color-azul-relevos);
+      font-family: var(--font-titulo);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+    }
+    .section--azul .tag, .section--oscuro .tag {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+    }
+
+    .section-titulo {
+      font-family: var(--font-titulo);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .section-subtitulo {
+      font-size: 1.1rem;
+      color: var(--color-gris-texto);
+      max-width: 640px;
+      line-height: 1.7;
+    }
+    .section--azul .section-subtitulo,
+    .section--oscuro .section-subtitulo { color: rgba(255,255,255,0.82); }
+
+    .section-header { text-align: center; margin-bottom: 64px; }
+    .section-header .section-subtitulo { margin: 0 auto; }
+
+    /* ── BOTONES ────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-titulo);
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 99px;
+      border: 2.5px solid transparent;
+      cursor: pointer;
+      transition: var(--transicion);
+      white-space: nowrap;
+    }
+    .btn--primario {
+      background: var(--color-azul-relevos);
+      color: #fff;
+      border-color: var(--color-azul-relevos);
+    }
+    .btn--primario:hover {
+      background: var(--color-azul-oscuro);
+      border-color: var(--color-azul-oscuro);
+      transform: translateY(-2px);
+      box-shadow: var(--sombra-hover);
+    }
+    .btn--blanco {
+      background: #fff;
+      color: var(--color-azul-relevos);
+      border-color: #fff;
+    }
+    .btn--blanco:hover {
+      background: transparent;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    .btn--outline {
+      background: transparent;
+      color: var(--color-azul-relevos);
+      border-color: var(--color-azul-relevos);
+    }
+    .btn--outline:hover {
+      background: var(--color-azul-relevos);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    .btn--coral {
+      background: var(--color-coral);
+      color: #fff;
+      border-color: var(--color-coral);
+    }
+    .btn--coral:hover {
+      background: #e55a5a;
+      border-color: #e55a5a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(255,107,107,0.3);
+    }
+    .btn--sm { padding: 10px 22px; font-size: 0.85rem; }
+    .btn--lg { padding: 18px 44px; font-size: 1.05rem; }
+
+    /* ── HEADER ─────────────────────────────── */
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,119,182,0.08);
+      transition: var(--transicion);
+    }
+    #header.scrolled {
+      box-shadow: 0 2px 24px rgba(0,119,182,0.10);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--color-azul-relevos);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    /* Placeholder logo si no hay imagen */
+    .logo-placeholder {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--color-azul-relevos);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-placeholder svg { width: 28px; height: 28px; fill: #fff; }
+    .logo-texto { display: flex; flex-direction: column; }
+    .logo-nombre {
+      font-family: var(--font-titulo);
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--color-azul-relevos);
+      line-height: 1.1;
+    }
+    .logo-slogan {
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--color-gris-texto);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    nav { display: flex; align-items: center; gap: 28px; }
+    nav a {
+      font-family: var(--font-titulo);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--color-gris-texto);
+      transition: color 0.2s;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 100%;
+      height: 2px;
+      background: var(--color-azul-relevos);
+      transition: right 0.3s ease;
+    }
+    nav a:hover { color: var(--color-azul-relevos); }
+    nav a:hover::after { right: 0; }
+
+    .header-cta { display: flex; align-items: center; gap: 12px; }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--color-azul-relevos);
+      border-radius: 2px;
+      transition: var(--transicion);
+    }
+    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile nav */
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: 72px; left: 0; right: 0; bottom: 0;
+      background: #fff;
+      z-index: 999;
+      padding: 32px 24px;
+      flex-direction: column;
+      gap: 8px;
+      overflow-y: auto;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      font-family: var(--font-titulo);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-texto);
+      padding: 14px 0;
+      border-bottom: 1px solid var(--color-gris-medio);
+      transition: color 0.2s;
+    }
+    .nav-mobile a:hover { color: var(--color-azul-relevos); }
+    .nav-mobile .btn { margin-top: 16px; width: 100%; justify-content: center; }
+
+    /* ── HERO ───────────────────────────────── */
+    #inicio {
+      padding-top: 72px;
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--color-azul-petroleo) 0%, var(--color-azul-oscuro) 45%, var(--color-azul-relevos) 100%);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image: radial-gradient(circle at 2px 2px, #fff 1px, transparent 0);
+      background-size: 40px 40px;
+    }
+    .hero-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.18;
+    }
+    .hero-blob-1 {
+      width: 500px; height: 500px;
+      background: var(--color-azul-claro);
+      top: -100px; right: -100px;
+    }
+    .hero-blob-2 {
+      width: 400px; height: 400px;
+      background: var(--color-coral);
+      bottom: -150px; left: -100px;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      padding: 80px 0;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-contenido { color: #fff; }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.92);
+      font-family: var(--font-titulo);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 99px;
+      border: 1px solid rgba(255,255,255,0.2);
+      margin-bottom: 24px;
+      backdrop-filter: blur(6px);
+    }
+    .hero-tag span { width: 6px; height: 6px; background: var(--color-amarillo); border-radius: 50%; flex-shrink: 0; }
+    .hero-titulo {
+      font-family: var(--font-titulo);
+      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+      font-weight: 900;
+      line-height: 1.08;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+    .hero-titulo em {
+      font-style: normal;
+      color: var(--color-amarillo);
+    }
+    .hero-subtitulo {
+      font-family: var(--font-titulo);
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      font-weight: 500;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 8px;
+    }
+    .hero-lema {
+      font-family: var(--font-titulo);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-amarillo);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      opacity: 0.92;
+    }
+    .hero-texto {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 40px;
+      max-width: 500px;
+    }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .hero-imagen {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-img-marco {
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 4/5;
+      border-radius: 32px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.35);
+    }
+    /* Placeholder hero: degradado + símbolo */
+    .hero-placeholder {
+      width: 100%; height: 100%;
+      background: linear-gradient(160deg, rgba(255,255,255,0.12) 0%, rgba(0,180,216,0.18) 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 32px;
+    }
+    /* Nota: sustituir .hero-placeholder por <img src="/assets/images/hero-relevos.jpg" alt="..."> */
+    .hero-placeholder-icon {
+      width: 120px; height: 120px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      border: 2px solid rgba(255,255,255,0.2);
+    }
+    .hero-placeholder-icon svg { width: 56px; height: 56px; fill: rgba(255,255,255,0.7); }
+    .hero-placeholder p {
+      font-family: var(--font-titulo);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 0 24px;
+    }
+
+    /* Badge flotante */
+    .hero-badge {
+      position: absolute;
+      bottom: 32px; left: -32px;
+      background: #fff;
+      border-radius: var(--radio);
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+      max-width: 240px;
+    }
+    .hero-badge-icono {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--color-azul-relevos), var(--color-azul-claro));
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-badge-icono svg { width: 22px; height: 22px; fill: #fff; }
+    .hero-badge-texto p:first-child {
+      font-family: var(--font-titulo);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--color-gris-texto);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .hero-badge-texto p:last-child {
+      font-family: var(--font-titulo);
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--color-azul-relevos);
+    }
+
+    /* Hero logo overlay */
+    .hero-logo-overlay {
+      position: absolute;
+      top: -20px; right: -20px;
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .hero-logo-overlay img { width: 100%; height: 100%; object-fit: cover; }
+    /* Placeholder logo overlay */
+    .hero-logo-placeholder-sm {
+      width: 100%; height: 100%;
+      background: var(--color-azul-relevos);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-logo-placeholder-sm svg { width: 40px; height: 40px; fill: #fff; }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 40px; left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.72rem;
+      font-family: var(--font-titulo);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .scroll-dot {
+      width: 24px; height: 40px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 12px;
+      position: relative;
+    }
+    .scroll-dot::before {
+      content: '';
+      position: absolute;
+      top: 6px; left: 50%;
+      transform: translateX(-50%);
+      width: 4px; height: 8px;
+      background: rgba(255,255,255,0.5);
+      border-radius: 2px;
+      animation: scrollDown 1.8s ease infinite;
+    }
+    @keyframes scrollDown {
+      0%   { top: 6px; opacity: 1; }
+      100% { top: 22px; opacity: 0; }
+    }
+
+    /* ── QUIÉNES SOMOS ──────────────────────── */
+    .quienes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .quienes-img-wrap {
+      position: relative;
+    }
+    .quienes-img-box {
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: 24px;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--color-azul-relevos) 0%, var(--color-azul-claro) 100%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    /* Nota: sustituir por <img src="/assets/images/equipo-relevos.jpg" alt="Equipo Relevos"> */
+    .img-placeholder-contenido {
+      display: flex; flex-direction: column; align-items: center; gap: 16px;
+      opacity: 0.6;
+    }
+    .img-placeholder-contenido svg { width: 64px; height: 64px; fill: #fff; }
+    .img-placeholder-contenido p { color: #fff; font-size: 0.85rem; font-weight: 600; text-align: center; }
+    .quienes-badge-anio {
+      position: absolute;
+      top: -20px; right: -20px;
+      background: var(--color-azul-relevos);
+      color: #fff;
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      box-shadow: 0 8px 24px rgba(0,119,182,0.35);
+    }
+    .quienes-badge-anio span:first-child {
+      font-family: var(--font-titulo);
+      font-size: 1.6rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .quienes-badge-anio span:last-child {
+      font-size: 0.65rem;
+      font-weight: 600;
+      opacity: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .quienes-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 36px;
+    }
+    .quienes-card {
+      background: var(--color-gris-claro);
+      border-radius: var(--radio);
+      padding: 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      transition: var(--transicion);
+      border: 1px solid transparent;
+    }
+    .quienes-card:hover {
+      background: #fff;
+      border-color: rgba(0,119,182,0.15);
+      box-shadow: var(--sombra);
+      transform: translateY(-2px);
+    }
+    .quienes-card-icono {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: rgba(0,119,182,0.10);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .quienes-card-icono svg { width: 22px; height: 22px; fill: var(--color-azul-relevos); }
+    .quienes-card h3 {
+      font-family: var(--font-titulo);
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--color-texto);
+    }
+    .quienes-card p { font-size: 0.82rem; color: var(--color-gris-texto); line-height: 1.5; }
+
+    /* Valores */
+    .valores-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 48px;
+    }
+    .valor-chip {
+      display: flex; align-items: center; gap: 8px;
+      background: #fff;
+      border: 1.5px solid rgba(0,119,182,0.15);
+      border-radius: 99px;
+      padding: 10px 20px;
+      font-family: var(--font-titulo);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--color-azul-relevos);
+      transition: var(--transicion);
+    }
+    .valor-chip:hover {
+      background: var(--color-azul-relevos);
+      color: #fff;
+      border-color: var(--color-azul-relevos);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(0,119,182,0.25);
+    }
+    .valor-dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: 0.6; }
+
+    /* ── HISTORIA ───────────────────────────── */
+    .historia-wrap {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .historia-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 56px;
+      position: relative;
+    }
+    .historia-timeline::before {
+      content: '';
+      position: absolute;
+      left: 28px;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--color-azul-relevos), var(--color-azul-claro));
+      opacity: 0.3;
+    }
+    .historia-item {
+      display: flex;
+      gap: 32px;
+      padding-bottom: 48px;
+      position: relative;
+    }
+    .historia-punto {
+      width: 58px; height: 58px; flex-shrink: 0;
+      background: #fff;
+      border: 3px solid var(--color-azul-relevos);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-titulo);
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--color-azul-relevos);
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 0 6px rgba(0,119,182,0.06);
+    }
+    .historia-contenido {
+      flex: 1;
+      padding-top: 12px;
+    }
+    .historia-contenido h3 {
+      font-family: var(--font-titulo);
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--color-azul-relevos);
+    }
+    .historia-contenido p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--color-gris-texto);
+    }
+    .historia-cita {
+      background: linear-gradient(135deg, var(--color-azul-relevos), var(--color-azul-claro));
+      color: #fff;
+      border-radius: 20px;
+      padding: 40px 48px;
+      text-align: center;
+      margin-top: 16px;
+    }
+    .historia-cita p {
+      font-family: var(--font-titulo);
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+    .historia-cita span {
+      font-size: 0.82rem;
+      font-weight: 600;
+      opacity: 0.75;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ── LEMA / MANIFIESTO ──────────────────── */
+    #lema {
+      background: linear-gradient(135deg, var(--color-azul-petroleo), var(--color-azul-oscuro));
+      padding: 96px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #lema::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+      background-size: 32px 32px;
+    }
+    .lema-inner {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .lema-comillas {
+      font-family: var(--font-titulo);
+      font-size: 8rem;
+      font-weight: 900;
+      color: rgba(255,255,255,0.06);
+      line-height: 0.5;
+      display: block;
+      margin-bottom: 24px;
+    }
+    .lema-texto {
+      font-family: var(--font-titulo);
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+    .lema-texto em {
+      font-style: normal;
+      color: var(--color-amarillo);
+    }
+    /* ← LEMA OFICIAL: editar el texto entre comillas */
+    .lema-bajada {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .lema-linea {
+      width: 80px; height: 3px;
+      background: var(--color-amarillo);
+      border-radius: 2px;
+      margin: 32px auto;
+    }
+
+    /* ── QUÉ HACEMOS ────────────────────────── */
+    .hacemos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .hacemos-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 36px 28px;
+      transition: var(--transicion);
+      border: 1.5px solid var(--color-gris-medio);
+      position: relative;
+      overflow: hidden;
+    }
+    .hacemos-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-azul-relevos), var(--color-azul-claro));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s ease;
+    }
+    .hacemos-card:hover {
+      box-shadow: var(--sombra-hover);
+      border-color: rgba(0,119,182,0.15);
+      transform: translateY(-4px);
+    }
+    .hacemos-card:hover::before { transform: scaleX(1); }
+    .hacemos-icono {
+      width: 60px; height: 60px;
+      background: linear-gradient(135deg, rgba(0,119,182,0.10), rgba(0,180,216,0.15));
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .hacemos-icono svg { width: 28px; height: 28px; fill: var(--color-azul-relevos); }
+    .hacemos-card h3 {
+      font-family: var(--font-titulo);
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--color-texto);
+    }
+    .hacemos-card p { font-size: 0.9rem; color: var(--color-gris-texto); line-height: 1.65; }
+
+    /* ── PROYECTOS ──────────────────────────── */
+    .proyectos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .proyecto-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: var(--transicion);
+      border: 1px solid var(--color-gris-medio);
+    }
+    .proyecto-card:hover {
+      box-shadow: var(--sombra-hover);
+      transform: translateY(-6px);
+    }
+    .proyecto-imagen {
+      width: 100%;
+      aspect-ratio: 16/9;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Nota: sustituir .proyecto-placeholder por <img src="/assets/images/[nombre].jpg"> */
+    .proyecto-placeholder {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 10px;
+    }
+    .proyecto-placeholder svg { width: 40px; height: 40px; fill: rgba(255,255,255,0.7); }
+    .proyecto-placeholder span { font-size: 0.75rem; color: rgba(255,255,255,0.6); font-weight: 600; }
+    .proyecto-body { padding: 24px; }
+    .proyecto-body h3 {
+      font-family: var(--font-titulo);
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--color-texto);
+    }
+    .proyecto-body p { font-size: 0.875rem; color: var(--color-gris-texto); line-height: 1.6; margin-bottom: 20px; }
+
+    /* ── MENSAJES ───────────────────────────── */
+    .mensajes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .mensaje-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 32px 28px;
+      border: 1.5px solid var(--color-gris-medio);
+      transition: var(--transicion);
+      position: relative;
+    }
+    .mensaje-card:hover {
+      box-shadow: var(--sombra);
+      border-color: rgba(0,119,182,0.2);
+      transform: translateY(-3px);
+    }
+    .mensaje-corazon {
+      width: 40px; height: 40px;
+      background: rgba(255,107,107,0.10);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+    }
+    .mensaje-corazon svg { width: 20px; height: 20px; fill: var(--color-coral); }
+    .mensaje-card blockquote {
+      font-family: var(--font-titulo);
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.45;
+      color: var(--color-texto);
+      font-style: italic;
+    }
+    .mensaje-card blockquote::before {
+      content: '"';
+      font-size: 2.5rem;
+      color: rgba(0,119,182,0.12);
+      font-family: Georgia, serif;
+      line-height: 0;
+      vertical-align: -0.4em;
+      margin-right: 2px;
+    }
+
+    /* ── COLABORAR ──────────────────────────── */
+    .colaborar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .colaborar-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 32px;
+      text-align: center;
+      transition: var(--transicion);
+      border: 2px solid var(--color-gris-medio);
+    }
+    .colaborar-card:hover {
+      border-color: var(--color-azul-relevos);
+      box-shadow: 0 8px 40px rgba(0,119,182,0.12);
+      transform: translateY(-4px);
+    }
+    .colaborar-icono {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+    }
+    .colaborar-icono svg { width: 36px; height: 36px; fill: #fff; }
+    .colaborar-card h3 {
+      font-family: var(--font-titulo);
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: var(--color-texto);
+    }
+    .colaborar-card p { font-size: 0.9rem; color: var(--color-gris-texto); line-height: 1.65; margin-bottom: 28px; }
+
+    /* ── DONACIÓN ───────────────────────────── */
+    .donacion-box {
+      background: linear-gradient(135deg, var(--color-azul-petroleo), var(--color-azul-oscuro));
+      border-radius: 28px;
+      padding: 64px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .donacion-box::before {
+      content: '♥';
+      position: absolute;
+      right: 40px; bottom: -20px;
+      font-size: 200px;
+      color: rgba(255,255,255,0.03);
+      line-height: 1;
+    }
+    .donacion-info { color: #fff; }
+    .donacion-info h2 {
+      font-family: var(--font-titulo);
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+    .donacion-info p { color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 24px; }
+    .donacion-datos {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 32px;
+    }
+    .iban-label {
+      font-family: var(--font-titulo);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .iban-numero {
+      font-family: 'Courier New', monospace;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--color-amarillo);
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    .iban-banco {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 24px;
+    }
+    .iban-feedback {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      color: #6ee7b7;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top: 12px;
+    }
+    .iban-feedback.visible { display: flex; }
+
+    /* ── EQUIPO ─────────────────────────────── */
+    .equipo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 700px;
+      margin: 0 auto 64px;
+    }
+    .equipo-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      border: 1.5px solid var(--color-gris-medio);
+      transition: var(--transicion);
+    }
+    .equipo-card:hover {
+      box-shadow: var(--sombra);
+      border-color: rgba(0,119,182,0.2);
+    }
+    .equipo-avatar {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-azul-relevos), var(--color-azul-claro));
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+      font-family: var(--font-titulo);
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #fff;
+    }
+    .equipo-card h3 {
+      font-family: var(--font-titulo);
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--color-texto);
+    }
+    .equipo-card p {
+      font-size: 0.85rem;
+      color: var(--color-azul-relevos);
+      font-weight: 600;
+    }
+
+    /* Contacto */
+    .contacto-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .contacto-info h3 {
+      font-family: var(--font-titulo);
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+    .contacto-datos { display: flex; flex-direction: column; gap: 16px; }
+    .contacto-dato {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .contacto-dato-icono {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: rgba(0,119,182,0.08);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .contacto-dato-icono svg { width: 20px; height: 20px; fill: var(--color-azul-relevos); }
+    .contacto-dato-texto p:first-child {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--color-gris-texto);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .contacto-dato-texto a, .contacto-dato-texto p:last-child {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--color-texto);
+    }
+    .contacto-dato-texto a:hover { color: var(--color-azul-relevos); }
+    .redes-sociales { display: flex; gap: 12px; margin-top: 28px; }
+    .red-social {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: var(--color-gris-claro);
+      display: flex; align-items: center; justify-content: center;
+      transition: var(--transicion);
+      border: 1.5px solid var(--color-gris-medio);
+    }
+    .red-social svg { width: 20px; height: 20px; fill: var(--color-gris-texto); transition: fill 0.2s; }
+    .red-social:hover { background: var(--color-azul-relevos); border-color: var(--color-azul-relevos); }
+    .red-social:hover svg { fill: #fff; }
+
+    /* Formulario */
+    .formulario { display: flex; flex-direction: column; gap: 16px; }
+    .form-fila { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-grupo { display: flex; flex-direction: column; gap: 6px; }
+    .form-grupo label {
+      font-family: var(--font-titulo);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--color-gris-texto);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .form-grupo input,
+    .form-grupo select,
+    .form-grupo textarea {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1.5px solid var(--color-gris-medio);
+      border-radius: var(--radio-sm);
+      font-family: var(--font-cuerpo);
+      font-size: 0.95rem;
+      color: var(--color-texto);
+      background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      appearance: none;
+    }
+    .form-grupo input:focus,
+    .form-grupo select:focus,
+    .form-grupo textarea:focus {
+      border-color: var(--color-azul-relevos);
+      box-shadow: 0 0 0 3px rgba(0,119,182,0.10);
+    }
+    .form-grupo textarea { resize: vertical; min-height: 130px; }
+    .form-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.85rem;
+      color: var(--color-gris-texto);
+      cursor: pointer;
+    }
+    .form-check input[type="checkbox"] { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; accent-color: var(--color-azul-relevos); }
+    .form-mensaje { display: none; padding: 14px 20px; border-radius: var(--radio-sm); font-weight: 600; font-size: 0.9rem; margin-top: 8px; }
+    .form-mensaje.exito { display: block; background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; }
+    .form-mensaje.error { display: block; background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+
+    /* ── FOOTER ─────────────────────────────── */
+    #footer {
+      background: var(--color-azul-petroleo);
+      color: rgba(255,255,255,0.75);
+      padding: 80px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 56px;
+    }
+    .footer-marca .logo-nombre { color: #fff; font-size: 1.05rem; }
+    .footer-marca .logo-slogan { color: rgba(255,255,255,0.5); }
+    .footer-lema {
+      font-family: var(--font-titulo);
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--color-amarillo);
+      margin: 16px 0;
+      line-height: 1.5;
+    }
+    .footer-desc { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.55); }
+    .footer-col h4 {
+      font-family: var(--font-titulo);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 20px;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.65);
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-contacto-item {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.85rem; color: rgba(255,255,255,0.65); margin-bottom: 10px;
+    }
+    .footer-contacto-item a { color: rgba(255,255,255,0.65); transition: color 0.2s; }
+    .footer-contacto-item a:hover { color: #fff; }
+    .footer-contacto-item svg { width: 16px; height: 16px; fill: rgba(255,255,255,0.4); flex-shrink: 0; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* ── ANIMACIONES AL SCROLL ──────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ── BOTÓN VOLVER ARRIBA ────────────────── */
+    #volver-arriba {
+      position: fixed;
+      bottom: 32px; right: 32px;
+      width: 52px; height: 52px;
+      background: var(--color-azul-relevos);
+      color: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,119,182,0.35);
+      cursor: pointer;
+      border: none;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: var(--transicion);
+      z-index: 990;
+    }
+    #volver-arriba.visible { opacity: 1; transform: translateY(0); }
+    #volver-arriba:hover { background: var(--color-azul-oscuro); transform: translateY(-2px); }
+    #volver-arriba svg { width: 22px; height: 22px; fill: #fff; }
+
+    /* ── RESPONSIVE ─────────────────────────── */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero-imagen { display: none; }
+      .hacemos-grid, .proyectos-grid, .mensajes-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .donacion-box { grid-template-columns: 1fr; padding: 40px; }
+      .contacto-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 64px 0; }
+      nav, .header-cta { display: none; }
+      .hamburger { display: flex; }
+      .quienes-grid { grid-template-columns: 1fr; }
+      .quienes-img-wrap { display: none; }
+      .quienes-cards { grid-template-columns: 1fr; }
+      .hacemos-grid, .proyectos-grid, .mensajes-grid, .colaborar-grid { grid-template-columns: 1fr; }
+      .equipo-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .form-fila { grid-template-columns: 1fr; }
+      .donacion-box { padding: 28px; border-radius: 20px; }
+      .historia-cita { padding: 28px 24px; }
+      .historia-cita p { font-size: 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-titulo { font-size: 2.2rem; }
+      .hero-btns { flex-direction: column; }
+      .hero-btns .btn { width: 100%; justify-content: center; }
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  NOTA DE ESTRUCTURA DE ARCHIVOS          ║
+     ║  Crear la siguiente estructura:          ║
+     ║  /                                       ║
+     ║  ├── index.html (este archivo)           ║
+     ║  ├── /assets/                            ║
+     ║  │   └── /images/                        ║
+     ║  │       ├── logo-relevos.png            ║
+     ║  │       ├── favicon-relevos.png         ║
+     ║  │       ├── hero-relevos.jpg            ║
+     ║  │       ├── camiseta-azul-relevos.jpg   ║
+     ║  │       ├── equipo-relevos.jpg          ║
+     ║  │       ├── voluntariado-hospital.jpg   ║
+     ║  │       ├── jovenes-actividades.jpg     ║
+     ║  │       ├── eventos-solidarios.jpg      ║
+     ║  │       └── merchandising-solidario.jpg ║
+     ║                                          ║
+     ║  AVISO LEGAL DE IMÁGENES:                ║
+     ║  Usar solo imágenes con permiso expreso  ║
+     ║  de la asociación. No publicar fotos     ║
+     ║  descargadas de redes sociales sin       ║
+     ║  autorización escrita.                   ║
+     ╚══════════════════════════════════════════╝ -->
+
+<!-- ══════════ HEADER ══════════ -->
+<header id="header" role="banner">
+  <div class="container">
+    <div class="header-inner">
+
+      <a href="#inicio" class="logo" aria-label="Relevos X la Vida - Inicio">
+        <!-- Logo oficial: sustituir por <img src="/assets/images/logo-relevos.png" alt="Logo Relevos X la Vida" class="logo-img"> -->
+        <div class="logo-placeholder" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+        </div>
+        <div class="logo-texto">
+          <span class="logo-nombre">Relevos X la Vida</span>
+          <span class="logo-slogan">Contra el Cáncer Juvenil</span>
+        </div>
+      </a>
+
+      <nav role="navigation" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#quienes">Quiénes somos</a>
+        <a href="#hacemos">Qué hacemos</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#voluntariado">Voluntariado</a>
+        <a href="#donacion">Donar</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="#donacion" class="btn btn--primario btn--sm">Colabora ahora</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Menú móvil -->
+<nav class="nav-mobile" id="nav-mobile" role="navigation" aria-label="Menú móvil">
+  <a href="#inicio"    onclick="cerrarMenu()">Inicio</a>
+  <a href="#quienes"  onclick="cerrarMenu()">Quiénes somos</a>
+  <a href="#historia" onclick="cerrarMenu()">Historia</a>
+  <a href="#hacemos"  onclick="cerrarMenu()">Qué hacemos</a>
+  <a href="#proyectos" onclick="cerrarMenu()">Proyectos</a>
+  <a href="#voluntariado" onclick="cerrarMenu()">Voluntariado</a>
+  <a href="#donacion" onclick="cerrarMenu()">Donar</a>
+  <a href="#contacto" onclick="cerrarMenu()">Contacto</a>
+  <a href="#donacion" class="btn btn--primario" onclick="cerrarMenu()">Colabora ahora</a>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<section id="inicio" aria-label="Bienvenida">
+  <div class="hero-bg-pattern" aria-hidden="true"></div>
+  <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+  <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero-inner">
+
+      <div class="hero-contenido">
+        <div class="hero-tag" aria-label="Ubicación y tipo">
+          <span aria-hidden="true"></span>
+          Asociación sin ánimo de lucro · Granada
+        </div>
+        <h1 class="hero-titulo">
+          <em>Relevos</em><br>X la Vida
+        </h1>
+        <p class="hero-subtitulo">Contra el cáncer juvenil</p>
+        <!-- Lema tomado de las camisetas oficiales. Confirmar si existe versión diferente -->
+        <p class="hero-lema">Relevos x la vida · Contra el cáncer juvenil</p>
+        <p class="hero-texto">
+          Acompañamos a adolescentes y jóvenes adultos con cáncer y a sus familias, creando espacios, actividades y programas que hacen más humano el camino durante el tratamiento.
+        </p>
+        <div class="hero-btns">
+          <a href="#quienes"   class="btn btn--blanco btn--lg">Conoce nuestra labor</a>
+          <a href="#donacion"  class="btn btn--coral  btn--lg">Quiero colaborar</a>
+        </div>
+      </div>
+
+      <div class="hero-imagen" aria-hidden="true">
+        <div class="hero-img-marco">
+          <!-- IMAGEN HERO: sustituir por <img src="/assets/images/hero-relevos.jpg" alt="Jóvenes con cáncer y voluntarios de Relevos X la Vida"> -->
+          <!-- Usar SOLO con permiso expreso de la asociación -->
+          <div class="hero-placeholder">
+            <div class="hero-placeholder-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+            </div>
+            <p>Imagen principal<br>[hero-relevos.jpg]<br>Solo con permiso</p>
+          </div>
+        </div>
+        <div class="hero-badge">
+          <div class="hero-badge-icono">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8zm1-13h-2v6l5.25 3.15.75-1.23-4-2.37V7z"/></svg>
+          </div>
+          <div class="hero-badge-texto">
+            <p>Fundada en</p>
+            <p>Noviembre 2018</p>
+          </div>
+        </div>
+        <div class="hero-logo-overlay">
+          <!-- Logo pequeño: sustituir por <img src="/assets/images/logo-relevos.png" alt=""> -->
+          <div class="hero-logo-placeholder-sm">
+            <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-dot"></div>
+    <span>Descubre más</span>
+  </div>
+</section>
+
+<!-- ══════════ QUIÉNES SOMOS ══════════ -->
+<section id="quienes" class="section">
+  <div class="container">
+    <div class="quienes-grid">
+
+      <div class="quienes-img-wrap reveal">
+        <div class="quienes-img-box">
+          <!-- IMAGEN: sustituir por <img src="/assets/images/equipo-relevos.jpg" alt="Equipo de Relevos X la Vida"> -->
+          <!-- Usar SOLO con permiso expreso de la asociación -->
+          <div class="img-placeholder-contenido">
+            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            <p>[equipo-relevos.jpg]<br>Solo con permiso</p>
+          </div>
+        </div>
+        <div class="quienes-badge-anio" aria-label="Año de fundación 2018">
+          <span>2018</span>
+          <span>Fundación</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="reveal">
+          <span class="tag">Quiénes somos</span>
+          <h2 class="section-titulo">Una asociación nacida<br>desde la experiencia</h2>
+          <p class="section-subtitulo">
+            Somos una asociación sin ánimo de lucro con sede en Churriana de la Vega (Granada), constituida en noviembre de 2018 y dedicada a mejorar las condiciones de adolescentes y jóvenes adultos con enfermedades oncohematológicas y de sus familias.
+          </p>
+        </div>
+        <div class="quienes-cards">
+          <div class="quienes-card reveal reveal-delay-1">
+            <div class="quienes-card-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <div>
+              <h3>Sin ánimo de lucro</h3>
+              <p>Toda colaboración va destinada a los jóvenes que lo necesitan.</p>
+            </div>
+          </div>
+          <div class="quienes-card reveal reveal-delay-2">
+            <div class="quienes-card-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+            </div>
+            <div>
+              <h3>Apoyo a jóvenes</h3>
+              <p>Acompañamos a adolescentes y jóvenes adultos con cáncer.</p>
+            </div>
+          </div>
+          <div class="quienes-card reveal reveal-delay-3">
+            <div class="quienes-card-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            </div>
+            <div>
+              <h3>Familias</h3>
+              <p>Apoyamos también a las familias durante el proceso oncológico.</p>
+            </div>
+          </div>
+          <div class="quienes-card reveal reveal-delay-4">
+            <div class="quienes-card-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            </div>
+            <div>
+              <h3>Humanización</h3>
+              <p>Creamos espacios hospitalarios adaptados a su edad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Valores -->
+    <div style="margin-top: 80px; text-align: center;" class="reveal">
+      <span class="tag">Nuestros valores</span>
+      <h2 class="section-titulo" style="margin-bottom: 8px;">Lo que nos guía</h2>
+      <div class="valores-grid" role="list">
+        <div class="valor-chip" role="listitem"><span class="valor-dot" aria-hidden="true"></span>Respeto</div>
+        <div class="valor-chip" role="listitem"><span class="valor-dot" aria-hidden="true"></span>Integridad</div>
+        <div class="valor-chip" role="listitem"><span class="valor-dot" aria-hidden="true"></span>Solidaridad</div>
+        <div class="valor-chip" role="listitem"><span class="valor-dot" aria-hidden="true"></span>Sensibilidad</div>
+        <div class="valor-chip" role="listitem"><span class="valor-dot" aria-hidden="true"></span>Transparencia</div>
+        <div class="valor-chip" role="listitem"><span class="valor-dot" aria-hidden="true"></span>Cercanía</div>
+        <div class="valor-chip" role="listitem"><span class="valor-dot" aria-hidden="true"></span>Esperanza</div>
+        <div class="valor-chip" role="listitem"><span class="valor-dot" aria-hidden="true"></span>Acompañamiento</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ HISTORIA ══════════ -->
+<section id="historia" class="section section--gris">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Nuestra historia</span>
+      <h2 class="section-titulo">Un camino que empezó<br>con una familia</h2>
+      <p class="section-subtitulo">
+        Cada gran causa nace de una necesidad real. La nuestra empezó cuando una familia vivió en primera persona lo que significa tener un hijo adolescente con cáncer.
+      </p>
+    </div>
+
+    <div class="historia-wrap">
+      <div class="historia-timeline">
+        <div class="historia-item reveal">
+          <div class="historia-punto" aria-label="2015">2015</div>
+          <div class="historia-contenido">
+            <h3>El origen: una familia, una necesidad</h3>
+            <p>
+              A finales de 2015, una familia de Granada atravesó uno de los momentos más difíciles que puede vivir cualquier hogar: el diagnóstico de cáncer de su hijo adolescente. Durante ese proceso, descubrieron algo que muchas familias en la misma situación experimentan: los adolescentes con cáncer a menudo no tienen un espacio propio. No encajan del todo en la unidad pediátrica, pensada para niños más pequeños, ni en la de adultos, con ritmos y necesidades muy diferentes.
+            </p>
+          </div>
+        </div>
+
+        <div class="historia-item reveal">
+          <div class="historia-punto" aria-label="2018">2018</div>
+          <div class="historia-contenido">
+            <h3>Noviembre de 2018: nace la asociación</h3>
+            <p>
+              Esa experiencia no quedó guardada. Se transformó en acción. En noviembre de 2018 se constituyó oficialmente <strong>Relevos X la Vida contra el Cáncer Juvenil</strong>, con el propósito firme de que ningún adolescente ni joven adulto tuviera que atravesar un proceso oncológico sin el acompañamiento, los espacios y los recursos adaptados a su edad y a sus necesidades. Desde entonces, la asociación trabaja con compromiso, cercanía y esperanza.
+            </p>
+          </div>
+        </div>
+
+        <div class="historia-item reveal">
+          <div class="historia-punto" aria-label="Hoy">Hoy</div>
+          <div class="historia-contenido">
+            <h3>Un movimiento solidario en crecimiento</h3>
+            <p>
+              Hoy, Relevos X la Vida es una comunidad de voluntarios, socios, colaboradores y familias que trabajan juntos por un objetivo común: que cada joven con cáncer se sienta acompañado, escuchado y atendido en un entorno adaptado. Desde Churriana de la Vega (Granada), el trabajo de la asociación trasciende fronteras y resuena en muchos corazones.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="historia-cita reveal" role="blockquote">
+        <p>"Detectaron que los adolescentes con cáncer quedan a veces en tierra de nadie: demasiado mayores para pediatría, demasiado jóvenes para adultos. Eso tenía que cambiar."</p>
+        <span>El origen de Relevos X la Vida</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ LEMA / MANIFIESTO ══════════ -->
+<section id="lema" aria-label="Nuestro lema">
+  <div class="container">
+    <div class="lema-inner reveal">
+      <span class="lema-comillas" aria-hidden="true">"</span>
+      <!-- Confirmar con la asociación si existe lema oficial distinto -->
+      <h2 class="lema-texto">
+        Relevos x la vida<br>contra el <em>cáncer juvenil</em>
+      </h2>
+      <div class="lema-linea" aria-hidden="true"></div>
+      <p class="lema-bajada">
+        Un mensaje que resume nuestra forma de acompañar: con esperanza, cercanía y compromiso. Porque en Relevos X la Vida creemos que nadie debería recorrer este camino solo.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ QUÉ HACEMOS ══════════ -->
+<section id="hacemos" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Qué hacemos</span>
+      <h2 class="section-titulo">Nuestras líneas de acción</h2>
+      <p class="section-subtitulo">Trabajamos en diferentes frentes para mejorar la calidad de vida de los adolescentes y jóvenes adultos con cáncer y la de sus familias.</p>
+    </div>
+    <div class="hacemos-grid">
+      <div class="hacemos-card reveal reveal-delay-1">
+        <div class="hacemos-icono" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+        </div>
+        <h3>Espacios hospitalarios adaptados</h3>
+        <p>Impulsamos la creación de unidades y espacios hospitalarios específicos para adolescentes y jóvenes adultos, diferenciados de los espacios infantiles y de adultos, adaptados a sus necesidades reales.</p>
+      </div>
+      <div class="hacemos-card reveal reveal-delay-2">
+        <div class="hacemos-icono" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+        </div>
+        <h3>Actividades de ocio durante el tratamiento</h3>
+        <p>Desarrollamos actividades de ocio, entretenimiento y distracción pensadas para los jóvenes durante sus estancias y tratamientos hospitalarios, haciendo el proceso más llevadero.</p>
+      </div>
+      <div class="hacemos-card reveal reveal-delay-3">
+        <div class="hacemos-icono" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+        </div>
+        <h3>Apoyo social y emocional</h3>
+        <p>Ofrecemos acompañamiento emocional y social a pacientes y a sus familias, ayudándoles a gestionar el proceso oncológico con más recursos, más apoyo y menos soledad.</p>
+      </div>
+      <div class="hacemos-card reveal reveal-delay-1">
+        <div class="hacemos-icono" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+        </div>
+        <h3>Sensibilización juvenil</h3>
+        <p>Concienciamos a la sociedad, especialmente a los jóvenes, sobre la realidad del cáncer juvenil, para generar empatía, reducir el estigma y fomentar la solidaridad desde edades tempranas.</p>
+      </div>
+      <div class="hacemos-card reveal reveal-delay-2">
+        <div class="hacemos-icono" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+        </div>
+        <h3>Prevención y concienciación</h3>
+        <p>Promovemos la educación sobre la prevención del cáncer desde edades tempranas y fomentamos la detección precoz, contribuyendo a una sociedad más informada y proactiva ante la enfermedad.</p>
+      </div>
+      <div class="hacemos-card reveal reveal-delay-3">
+        <div class="hacemos-icono" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l5 2.18V11c0 3.5-2.33 6.79-5 7.93-2.67-1.14-5-4.43-5-7.93V7.18L12 5z"/></svg>
+        </div>
+        <h3>Voluntariado activo</h3>
+        <p>Coordinamos un equipo de voluntarios comprometidos que participan en actividades, eventos solidarios y acciones de sensibilización, siendo el corazón humano de la asociación.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PROYECTOS ══════════ -->
+<section id="proyectos" class="section section--gris">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Proyectos</span>
+      <h2 class="section-titulo">Lo que estamos construyendo</h2>
+      <p class="section-subtitulo">Cada proyecto es un paso más hacia una atención oncológica más humana, adaptada y acompañada para los jóvenes.</p>
+    </div>
+    <div class="proyectos-grid">
+
+      <article class="proyecto-card reveal reveal-delay-1">
+        <div class="proyecto-imagen">
+          <!-- Sustituir por <img src="/assets/images/voluntariado-hospital.jpg" alt="Unidad de adolescentes en hospital"> (solo con permiso) -->
+          <div class="proyecto-placeholder" style="background: linear-gradient(135deg,#0077B6,#00B4D8);">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+            <span>[voluntariado-hospital.jpg]</span>
+          </div>
+        </div>
+        <div class="proyecto-body">
+          <h3>Unidad de adolescentes y jóvenes adultos</h3>
+          <p>Impulsamos la creación de unidades hospitalarias específicas donde los jóvenes con cáncer tengan un espacio propio, adaptado a sus necesidades y diferente al pediátrico o al de adultos.</p>
+          <a href="#contacto" class="btn btn--outline btn--sm">Ver más</a>
+        </div>
+      </article>
+
+      <article class="proyecto-card reveal reveal-delay-2">
+        <div class="proyecto-imagen">
+          <!-- Sustituir por <img src="/assets/images/jovenes-actividades.jpg" alt="Actividades en hospital"> (solo con permiso) -->
+          <div class="proyecto-placeholder" style="background: linear-gradient(135deg,#023E8A,#0077B6);">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+            <span>[jovenes-actividades.jpg]</span>
+          </div>
+        </div>
+        <div class="proyecto-body">
+          <h3>Actividades en hospitales</h3>
+          <p>Organizamos actividades de ocio, talleres creativos y momentos de distracción directamente en los centros hospitalarios, para hacer más ligero el tiempo de tratamiento.</p>
+          <a href="#contacto" class="btn btn--outline btn--sm">Ver más</a>
+        </div>
+      </article>
+
+      <article class="proyecto-card reveal reveal-delay-3">
+        <div class="proyecto-imagen">
+          <div class="proyecto-placeholder" style="background: linear-gradient(135deg,#03045E,#023E8A);">
+            <svg viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5S14.67 12 15.5 12s1.5.67 1.5 1.5S16.33 15 15.5 15zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 9 18.5 9s1.5.67 1.5 1.5S19.33 12 18.5 12z"/></svg>
+            <span>Consolas y recursos de ocio</span>
+          </div>
+        </div>
+        <div class="proyecto-body">
+          <h3>Consolas, juegos y recursos de ocio</h3>
+          <p>Dotamos a las unidades hospitalarias de consolas, videojuegos, libros, materiales creativos y recursos que permiten a los jóvenes desconectar y disfrutar durante sus estancias.</p>
+          <a href="#contacto" class="btn btn--outline btn--sm">Ver más</a>
+        </div>
+      </article>
+
+      <article class="proyecto-card reveal reveal-delay-1">
+        <div class="proyecto-imagen">
+          <div class="proyecto-placeholder" style="background: linear-gradient(135deg,#0077B6,#48CAE4);">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <span>Turbantes X la Vida</span>
+          </div>
+        </div>
+        <div class="proyecto-body">
+          <h3>Turbantes X la Vida</h3>
+          <p>Un proyecto especial que acompaña a los jóvenes durante la pérdida del cabello por la quimioterapia, ofreciendo turbantes con diseños jóvenes y coloridos que devuelven la confianza y la identidad.</p>
+          <a href="#contacto" class="btn btn--outline btn--sm">Ver más</a>
+        </div>
+      </article>
+
+      <article class="proyecto-card reveal reveal-delay-2">
+        <div class="proyecto-imagen">
+          <!-- Sustituir por <img src="/assets/images/merchandising-solidario.jpg" alt="Merchandising solidario"> (solo con permiso) -->
+          <div class="proyecto-placeholder" style="background: linear-gradient(135deg,#FF6B6B,#FF8E8E);">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+            <span>[merchandising-solidario.jpg]</span>
+          </div>
+        </div>
+        <div class="proyecto-body">
+          <h3>Merchandising solidario</h3>
+          <p>Camisetas, accesorios y productos solidarios cuya venta contribuye directamente a financiar los programas y actividades de la asociación. Llevar nuestra camiseta es ser parte del relevo.</p>
+          <a href="#contacto" class="btn btn--outline btn--sm">Ver más</a>
+        </div>
+      </article>
+
+      <article class="proyecto-card reveal reveal-delay-3">
+        <div class="proyecto-imagen">
+          <!-- Sustituir por <img src="/assets/images/eventos-solidarios.jpg" alt="Eventos solidarios"> (solo con permiso) -->
+          <div class="proyecto-placeholder" style="background: linear-gradient(135deg,#FFD166,#F4A261);">
+            <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+            <span>[eventos-solidarios.jpg]</span>
+          </div>
+        </div>
+        <div class="proyecto-body">
+          <h3>Eventos solidarios y campañas</h3>
+          <p>Organizamos eventos solidarios, carreras, campañas de sensibilización y actividades de recaudación que acercan la causa del cáncer juvenil a toda la sociedad con un espíritu festivo y comprometido.</p>
+          <a href="#contacto" class="btn btn--outline btn--sm">Ver más</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ MENSAJES MOTIVACIONALES ══════════ -->
+<section id="mensajes" class="section section--azul">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Palabras que acompañan</span>
+      <h2 class="section-titulo" style="color:#fff;">Mensajes desde el corazón</h2>
+    </div>
+    <div class="mensajes-grid">
+      <div class="mensaje-card reveal reveal-delay-1">
+        <div class="mensaje-corazon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+        </div>
+        <blockquote>No estás solo. Cada paso cuenta.</blockquote>
+      </div>
+      <div class="mensaje-card reveal reveal-delay-2">
+        <div class="mensaje-corazon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+        </div>
+        <blockquote>La esperanza también se construye acompañando.</blockquote>
+      </div>
+      <div class="mensaje-card reveal reveal-delay-3">
+        <div class="mensaje-corazon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+        </div>
+        <blockquote>Juntos podemos hacer más humano el camino.</blockquote>
+      </div>
+      <div class="mensaje-card reveal reveal-delay-1">
+        <div class="mensaje-corazon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+        </div>
+        <blockquote>La vida se releva, se comparte y se acompaña.</blockquote>
+      </div>
+      <div class="mensaje-card reveal reveal-delay-2">
+        <div class="mensaje-corazon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+        </div>
+        <blockquote>Cada gesto solidario puede cambiar un día difícil.</blockquote>
+      </div>
+      <div class="mensaje-card reveal reveal-delay-3">
+        <div class="mensaje-corazon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+        </div>
+        <blockquote>Donde hay apoyo, también hay fuerza.</blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CÓMO COLABORAR ══════════ -->
+<section id="voluntariado" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Cómo colaborar</span>
+      <h2 class="section-titulo">Súmate a Relevos X la Vida</h2>
+      <p class="section-subtitulo">Tu ayuda se convierte en compañía, recursos, actividades y espacios pensados para jóvenes que están viviendo un proceso oncológico. Cualquier forma de participar importa.</p>
+    </div>
+    <div class="colaborar-grid">
+      <div class="colaborar-card reveal reveal-delay-1">
+        <div class="colaborar-icono" style="background: linear-gradient(135deg,#0077B6,#00B4D8);" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+        </div>
+        <h3>Hazte voluntario</h3>
+        <p>Únete a nuestro equipo de voluntarios y participa en actividades, eventos y proyectos. Tu tiempo y dedicación tienen un impacto enorme en la vida de los jóvenes.</p>
+        <a href="#contacto" class="btn btn--primario">Quiero ser voluntario</a>
+      </div>
+      <div class="colaborar-card reveal reveal-delay-2">
+        <div class="colaborar-icono" style="background: linear-gradient(135deg,#FF6B6B,#FF8E53);" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+        </div>
+        <h3>Hazte socio</h3>
+        <p>Con una aportación periódica como socio, garantizas la continuidad de nuestros programas y te conviertes en pilar fundamental de la asociación.</p>
+        <a href="#donacion" class="btn btn--coral">Quiero ser socio</a>
+      </div>
+      <div class="colaborar-card reveal reveal-delay-3">
+        <div class="colaborar-icono" style="background: linear-gradient(135deg,#FFD166,#F4A261);" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+        </div>
+        <h3>Dona o compra solidario</h3>
+        <p>Realiza una donación puntual o adquiere productos solidarios de la asociación. Cada euro se destina directamente a mejorar la vida de los jóvenes con cáncer.</p>
+        <a href="#donacion" class="btn btn--outline">Ver cómo donar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ DONACIÓN ══════════ -->
+<section id="donacion" class="section section--gris">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Donaciones</span>
+      <h2 class="section-titulo">Tu aportación hace la diferencia</h2>
+    </div>
+    <div class="donacion-box reveal">
+      <div class="donacion-info">
+        <h2>Colabora con<br>Relevos X la Vida</h2>
+        <p>Cada aportación ayuda a crear espacios más humanos, actividades de acompañamiento y recursos para adolescentes y jóvenes adultos que están atravesando un proceso oncológico.</p>
+        <p style="font-size:0.9rem; color: rgba(255,255,255,0.55);">
+          100% de las donaciones se destinan a los programas de la asociación.<br>
+          Asociación sin ánimo de lucro registrada en Granada.
+        </p>
+        <div style="margin-top: 28px;">
+          <!-- DONACIÓN ONLINE: pendiente de confirmación. Activar cuando la asociación apruebe la web -->
+          <button class="btn btn--coral btn--lg" disabled style="opacity:0.55;cursor:not-allowed;" title="Donación online próximamente disponible">Donar online · Próximamente</button>
+          <p style="font-size:0.82rem;color:rgba(255,255,255,0.5);margin-top:12px;">Mientras tanto, usa el IBAN indicado abajo ↓</p>
+        </div>
+      </div>
+      <div class="donacion-datos" aria-label="Datos bancarios para donación">
+        <p class="iban-label">Cuenta bancaria</p>
+        <p class="iban-numero" id="iban-texto" aria-label="IBAN ES12 2100 5760 4802 0022 7924">ES12 2100 5760 4802 0022 7924</p>
+        <p class="iban-banco">La Caixa (CaixaBank)</p>
+        <button class="btn btn--blanco" onclick="copiarIBAN()" aria-label="Copiar número IBAN al portapapeles">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--color-azul-relevos);" aria-hidden="true"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+          Copiar IBAN
+        </button>
+        <p class="iban-feedback" id="iban-feedback" role="status" aria-live="polite">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:#6ee7b7;" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          ¡IBAN copiado!
+        </p>
+        <p style="font-size:0.78rem; color:rgba(255,255,255,0.4); margin-top: 20px; line-height:1.5;">
+          En el concepto de la transferencia puedes indicar "Donación Relevos X la Vida". Guarda el justificante por si necesitas el certificado de donación.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ EQUIPO Y CONTACTO ══════════ -->
+<section id="contacto" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Equipo y contacto</span>
+      <h2 class="section-titulo">Personas reales detrás de la causa</h2>
+      <p class="section-subtitulo">Detrás de Relevos X la Vida hay personas comprometidas que trabajan cada día para que los jóvenes con cáncer estén acompañados.</p>
+    </div>
+
+    <div class="equipo-grid">
+      <div class="equipo-card reveal reveal-delay-1">
+        <!-- Avatar con iniciales. Sustituir por foto real si hay permiso -->
+        <div class="equipo-avatar" aria-hidden="true">MR</div>
+        <h3>Maruzzella Romero</h3>
+        <p>Presidenta / Representante Legal</p>
+      </div>
+      <div class="equipo-card reveal reveal-delay-2">
+        <div class="equipo-avatar" aria-hidden="true">EM</div>
+        <h3>Elisa Martín Justicia</h3>
+        <p>Trabajadora Social · Persona de contacto</p>
+      </div>
+    </div>
+
+    <div class="contacto-grid">
+      <div class="contacto-info reveal">
+        <h3>Contáctanos</h3>
+        <div class="contacto-datos">
+          <div class="contacto-dato">
+            <div class="contacto-dato-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div class="contacto-dato-texto">
+              <p>Email</p>
+              <a href="mailto:info@relevosxlavida.com">info@relevosxlavida.com</a>
+            </div>
+          </div>
+          <div class="contacto-dato">
+            <div class="contacto-dato-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </div>
+            <div class="contacto-dato-texto">
+              <p>Teléfono</p>
+              <a href="tel:+34671923727">+34 671 923 727</a>
+            </div>
+          </div>
+          <div class="contacto-dato">
+            <div class="contacto-dato-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div class="contacto-dato-texto">
+              <p>Sede</p>
+              <p>Churriana de la Vega, Granada</p>
+            </div>
+          </div>
+          <div class="contacto-dato">
+            <div class="contacto-dato-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+            </div>
+            <div class="contacto-dato-texto">
+              <p>Web oficial</p>
+              <a href="https://www.relevosxlavida.com" target="_blank" rel="noopener">www.relevosxlavida.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="redes-sociales" aria-label="Redes sociales">
+          <a href="https://instagram.com/relevos_x_la_vida" class="red-social" target="_blank" rel="noopener" aria-label="Instagram de Relevos X la Vida">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/AsociacionRelevosXlaVida" class="red-social" target="_blank" rel="noopener" aria-label="Facebook de Relevos X la Vida">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Formulario de contacto -->
+      <!-- Preparado para conectar con Formspree, Netlify Forms o EmailJS -->
+      <!-- Para Formspree: cambiar el action a https://formspree.io/f/[TU-ID] y método POST -->
+      <form class="formulario reveal" id="formulario-contacto" novalidate aria-label="Formulario de contacto">
+        <div class="form-fila">
+          <div class="form-grupo">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="name" />
+          </div>
+          <div class="form-grupo">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required autocomplete="email" />
+          </div>
+        </div>
+        <div class="form-fila">
+          <div class="form-grupo">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" autocomplete="tel" />
+          </div>
+          <div class="form-grupo">
+            <label for="motivo">Motivo de contacto</label>
+            <select id="motivo" name="motivo">
+              <option value="">Selecciona un motivo</option>
+              <option value="voluntariado">Voluntariado</option>
+              <option value="donacion">Donación</option>
+              <option value="socio">Hacerse socio</option>
+              <option value="colaboracion">Colaboración empresarial</option>
+              <option value="informacion">Información general</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-grupo">
+          <label for="mensaje">Mensaje *</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos en qué podemos ayudarte o cómo te gustaría colaborar..." required></textarea>
+        </div>
+        <label class="form-check">
+          <input type="checkbox" id="privacidad" name="privacidad" required />
+          <span>He leído y acepto la <a href="#" style="color:var(--color-azul-relevos);text-decoration:underline;" aria-label="Política de privacidad (enlace a actualizar)">política de privacidad</a>. Consiento el tratamiento de mis datos para gestionar mi solicitud. *</span>
+        </label>
+        <div id="form-mensaje" class="form-mensaje" role="alert" aria-live="polite"></div>
+        <button type="submit" class="btn btn--primario btn--lg">
+          <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff;" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          Enviar mensaje
+        </button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-marca">
+        <a href="#inicio" class="logo" aria-label="Volver al inicio">
+          <!-- Logo footer: sustituir por <img src="/assets/images/logo-relevos.png" alt="Logo Relevos X la Vida" width="44" height="44"> -->
+          <div class="logo-placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+          </div>
+          <div class="logo-texto">
+            <span class="logo-nombre">Relevos X la Vida</span>
+            <span class="logo-slogan">Contra el Cáncer Juvenil</span>
+          </div>
+        </a>
+        <!-- Confirmar lema oficial con la asociación -->
+        <p class="footer-lema">Relevos x la vida · Contra el cáncer juvenil</p>
+        <p class="footer-desc">Asociación sin ánimo de lucro · Churriana de la Vega, Granada · Fundada en noviembre de 2018.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Menú rápido</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#quienes">Quiénes somos</a></li>
+          <li><a href="#historia">Historia</a></li>
+          <li><a href="#hacemos">Qué hacemos</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#voluntariado">Voluntariado</a></li>
+          <li><a href="#donacion">Donar</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <div class="footer-contacto-item">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:info@relevosxlavida.com">info@relevosxlavida.com</a>
+        </div>
+        <div class="footer-contacto-item">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:+34671923727">+34 671 923 727</a>
+        </div>
+        <div class="footer-contacto-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          <span>Churriana de la Vega, Granada</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Síguenos</h4>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="https://instagram.com/relevos_x_la_vida" target="_blank" rel="noopener" class="footer-contacto-item" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg>
+            @relevos_x_la_vida
+          </a>
+          <a href="https://www.facebook.com/AsociacionRelevosXlaVida" target="_blank" rel="noopener" class="footer-contacto-item" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Relevos X la Vida
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 Relevos X la Vida contra el Cáncer Juvenil. Todos los derechos reservados.</p>
+      <p>Asociación sin ánimo de lucro · Granada · <a href="#" style="color:rgba(255,255,255,0.4);">Política de privacidad</a> · <a href="#" style="color:rgba(255,255,255,0.4);">Aviso legal</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Botón volver arriba -->
+<button id="volver-arriba" aria-label="Volver al inicio de la página">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+</button>
+
+<!-- ══════════ JAVASCRIPT ══════════ -->
+<script>
+  // ── Menú hamburguesa ──────────────────────────
+  const hamburger   = document.getElementById('hamburger');
+  const navMobile   = document.getElementById('nav-mobile');
+
+  hamburger.addEventListener('click', () => {
+    const open = navMobile.classList.toggle('open');
+    hamburger.classList.toggle('active', open);
+    hamburger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  function cerrarMenu() {
+    navMobile.classList.remove('open');
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  // ── Header al hacer scroll ────────────────────
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  // ── Botón volver arriba ───────────────────────
+  const btnVolver = document.getElementById('volver-arriba');
+  window.addEventListener('scroll', () => {
+    btnVolver.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+  btnVolver.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ── Copiar IBAN ───────────────────────────────
+  function copiarIBAN() {
+    const iban = 'ES12 2100 5760 4802 0022 7924';
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(iban).then(mostrarFeedbackIBAN);
+    } else {
+      // Fallback para navegadores sin API Clipboard
+      const el = document.createElement('textarea');
+      el.value = iban;
+      el.setAttribute('readonly', '');
+      el.style.position = 'absolute';
+      el.style.left = '-9999px';
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+      mostrarFeedbackIBAN();
+    }
+  }
+  function mostrarFeedbackIBAN() {
+    const fb = document.getElementById('iban-feedback');
+    fb.classList.add('visible');
+    setTimeout(() => fb.classList.remove('visible'), 3000);
+  }
+
+  // ── Animaciones al hacer scroll (Intersection Observer) ──
+  const revealElements = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
+  revealElements.forEach(el => observer.observe(el));
+
+  // ── Validación y envío del formulario ─────────
+  document.getElementById('formulario-contacto').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const nombre    = document.getElementById('nombre').value.trim();
+    const email     = document.getElementById('email').value.trim();
+    const mensaje   = document.getElementById('mensaje').value.trim();
+    const privacidad = document.getElementById('privacidad').checked;
+    const msgBox    = document.getElementById('form-mensaje');
+
+    // Limpiar
+    msgBox.className = 'form-mensaje';
+    msgBox.textContent = '';
+
+    // Validaciones
+    if (!nombre) {
+      mostrarMensajeForm('Por favor, indica tu nombre.', 'error');
+      document.getElementById('nombre').focus();
+      return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      mostrarMensajeForm('Por favor, introduce un email válido.', 'error');
+      document.getElementById('email').focus();
+      return;
+    }
+    if (!mensaje) {
+      mostrarMensajeForm('Por favor, escribe tu mensaje.', 'error');
+      document.getElementById('mensaje').focus();
+      return;
+    }
+    if (!privacidad) {
+      mostrarMensajeForm('Debes aceptar la política de privacidad para continuar.', 'error');
+      document.getElementById('privacidad').focus();
+      return;
+    }
+
+    // ── Para activar el envío real, elige una opción:
+    // OPCIÓN A — Formspree:
+    //   <form action="https://formspree.io/f/[TU-ID]" method="POST">
+    //   y elimina el e.preventDefault() o usa fetch API con FormData.
+    //
+    // OPCIÓN B — EmailJS:
+    //   emailjs.sendForm('SERVICE_ID', 'TEMPLATE_ID', this, 'PUBLIC_KEY')
+    //     .then(() => mostrarMensajeForm('...', 'exito'));
+    //
+    // OPCIÓN C — Netlify Forms:
+    //   Añadir atributo data-netlify="true" al <form>
+
+    // Por ahora: simulación de éxito
+    mostrarMensajeForm('¡Mensaje enviado! Nos pondremos en contacto contigo pronto. Gracias por tu interés en Relevos X la Vida.', 'exito');
+    this.reset();
+  });
+
+  function mostrarMensajeForm(texto, tipo) {
+    const msgBox = document.getElementById('form-mensaje');
+    msgBox.textContent = texto;
+    msgBox.className = 'form-mensaje ' + tipo;
+    msgBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // ── Scroll suave para anclas del header ───────
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80; // altura del header fijo
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
